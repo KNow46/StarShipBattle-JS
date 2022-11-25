@@ -15,16 +15,16 @@ class starship
 	}
 	shoot()
 	{
-		missiles.push(new missile(X + 22, Y, 1, "player", -10, -20, "missile.gif", true));
-		missiles.push(new missile(X + 88, Y, 1, "player", 10, -20, "missile.gif", true));
-		missiles.push(new missile(X + 55, Y, 1, "player", 0, -20, "missile.gif", true));
+		missiles.push(new missile(X + 22, Y, 1, "player", -10, -20, "graphic/missile.gif", true));
+		missiles.push(new missile(X + 88, Y, 1, "player", 10, -20, "graphic/missile.gif", true));
+		missiles.push(new missile(X + 55, Y, 1, "player", 0, -20, "graphic/missile.gif", true));
 	}
 }
 class oneCannonship extends starship
 {
 	shoot()
 	{
-		missiles.push(new missile(this.x, this.y, 1, owner, 0, -20, "missile.gif", true));
+		missiles.push(new missile(this.x, this.y, 1, owner, 0, -20, "graphic/missile.gif", true));
 	}
     
 }

@@ -34,9 +34,9 @@ setInterval(createplayerMissiles, 1000/20);
 function createplayerMissiles()
 {
 	if (mCounting % 5 == 0) {
-		missiles.push(new missile(X + 22, Y, 1, "player", -10, -20,"missile.gif", true));
-		missiles.push(new missile(X + 88, Y, 1, "player", 10, -20, "missile.gif", true));
-		missiles.push(new missile(X + 55, Y, 1, "player", 0, -20, "missile.gif", true));
+		missiles.push(new missile(X + 22, Y, 1, "player", 0, -20,"graphic/missile.gif", true));
+		missiles.push(new missile(X + 88, Y, 1, "player", 0, -20, "graphic/missile.gif", true));
+		//missiles.push(new missile(X + 55, Y, 1, "player", 0, -20, "graphic/missile.gif", true));
 	}
 	for (let i = 0; i < missiles.length; i++)
 	{
@@ -79,7 +79,7 @@ setInterval(asteroidsfun, 1000 / 25);
 function asteroidsfun() {
 	if (asteroidsSpawnSpeed - asteroidframecount == 0)
 	{
-		asteroids.push(new asteroid(Math.random() *canvasWidth, -100, 5, 0, 5, "asteroid.gif", 2, true));
+		asteroids.push(new asteroid(Math.random() * canvasWidth, -100, 5, 0, 5, "graphic/asteroid.gif", 1, true));
 	}
 	for (let i = 0; i < asteroids.length; i++) {
 		asteroids[i].move(asteroids[i].speedx, asteroids[i].speedy);

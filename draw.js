@@ -25,14 +25,14 @@ function DrawEverything()
 function DrawBackgroud(frame) {
 	//ctx.fillStyle = "gray";
 	const background = new Image();
-	background.src = "background.png";
+	background.src = "graphic/background.png";
 	ctx.drawImage(background, 0, 0, canvasWidth, canvasHeight);
 }
 
 const shipIMG = new Image();
-shipIMG.src = "ship.gif";
+shipIMG.src = "graphic/ship.gif";
 const shootIMG = new Image();
-shootIMG.src = "shipShoot.gif";
+shootIMG.src = "graphic/shipShoot.gif";
 function DrawStarships(frame)
 {
 	
@@ -47,7 +47,7 @@ function DrawMissiles(frame)
 {
 	for (let i = 0; i < missiles.length; i++) {
 		if (missiles[i].istnieje == true) {
-			
+
 			const missileIMG = new Image();
 			missileIMG.src = missiles[i].src;
 			ctx.drawImage(missileIMG, missiles[i].x, missiles[i].y, 30, 60);
@@ -78,7 +78,7 @@ function DrawAsteroids(frame)
 //@frames means all gif files in folder
 //@x,y - position of image
 //@width, height - parameters of image
-
+//NEED FIX, SOMETIMES OBJECT FLASHES
 function playGIF(IMG,src, x, y, width, height, frames, currentframe, speed)
 {
 
